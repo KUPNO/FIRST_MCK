@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('background.jpg'); /* Путь к фоновой картинке */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        #quiz-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Прозрачный черный фон */
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+        #question-image {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #answers {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Две кнопки в строке */
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: rgba(128, 128, 128, 0.8); /* Серый цвет с прозрачностью */
+            color: white;
+            font-size: 1em;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgba(192, 192, 192, 0.8); /* Светлее при наведении */
+        }
+
+        #result img {
+            max-width: 80%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Викторина</h1>
+    <div id="quiz-container">
+        <img id="question-image" src="" alt="Вопрос" />
+        <div id="answers"></div>
+    </div>
+    <div id="result"></div>
+    <script src="quiz.js"></script>
+</body>
+</html>
