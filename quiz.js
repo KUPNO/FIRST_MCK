@@ -1,3 +1,19 @@
+// Подключаем VK Bridge
+import bridge from '@vkontakte/vk-bridge';
+
+// Инициализация приложения ВКонтакте
+bridge.send('VKWebAppInit')
+    .then((data) => {
+        if (data.result) {
+            console.log('Приложение успешно инициализировано!');
+        } else {
+            console.log('Ошибка инициализации приложения.');
+        }
+    })
+    .catch((error) => {
+        console.error('Ошибка VK Bridge:', error);
+    });
+
 // Список вопросов
 const questions = [
     {
