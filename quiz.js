@@ -1,8 +1,5 @@
-// Подключаем VK Bridge
-import bridge from '@vkontakte/vk-bridge';
-
-// Инициализация приложения ВКонтакте
-bridge.send('VKWebAppInit')
+// Инициализация VK Bridge
+vkBridge.send('VKWebAppInit')
     .then((data) => {
         if (data.result) {
             console.log('Приложение успешно инициализировано!');
