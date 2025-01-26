@@ -107,6 +107,8 @@ function showResult() {
     // Добавляем кнопку "Попробовать снова"
     const retryButton = document.createElement("button");
     retryButton.textContent = "Попробовать снова";
+
+    // Добавляем обработчик клика для сброса викторины
     retryButton.onclick = () => {
         currentQuestionIndex = 0;
         score = 0;
@@ -114,7 +116,26 @@ function showResult() {
         container.style.display = "block"; // Показываем викторину
         showQuestion(); // Показываем первый вопрос
     };
-    resultDiv.appendChild(retryButton);
+
+    // Применяем стили для кнопки
+    retryButton.style.marginTop = "20px";
+    retryButton.style.padding = "10px 20px";
+    retryButton.style.fontSize = "1.2em";
+    retryButton.style.color = "white";
+    retryButton.style.backgroundColor = "rgba(128, 128, 128, 0.8)";
+    retryButton.style.border = "none";
+    retryButton.style.borderRadius = "5px";
+    retryButton.style.cursor = "pointer";
+
+    retryButton.onmouseover = () => {
+        retryButton.style.backgroundColor = "rgba(192, 192, 192, 0.8)";
+    };
+
+    retryButton.onmouseout = () => {
+        retryButton.style.backgroundColor = "rgba(128, 128, 128, 0.8)";
+    };
+
+    resultDiv.appendChild(retryButton); // Добавляем кнопку в div с результатами
 }
 
 // Запуск викторины
