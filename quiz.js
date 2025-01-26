@@ -82,6 +82,9 @@ function showResult() {
     // Скрываем викторину
     container.style.display = "none";
 
+    // Очищаем предыдущие результаты
+    resultDiv.innerHTML = "";
+
     // Выбираем картинку для результата
     let resultImage = "";
 
@@ -100,6 +103,18 @@ function showResult() {
     img.src = resultImage;
     img.alt = "Результат";
     resultDiv.appendChild(img);
+
+    // Добавляем кнопку "Попробовать снова"
+    const retryButton = document.createElement("button");
+    retryButton.textContent = "Попробовать снова";
+    retryButton.onclick = () => {
+        currentQuestionIndex = 0;
+        score = 0;
+        resultDiv.innerHTML = ""; // Очищаем результаты
+        container.style.display = "block"; // Показываем викторину
+        showQuestion(); // Показываем первый вопрос
+    };
+    resultDiv.appendChild(retryButton);
 }
 
 // Запуск викторины
