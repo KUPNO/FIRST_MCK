@@ -14,9 +14,9 @@ vkBridge.send('VKWebAppInit')
 // Список вопросов
 const questions = [
     {
-        image: "images/question1.jpg", // Путь к картинке вопроса
-        answers: ["2", "4", "5", "3"],
-        correct: "5"
+        image: "images/5.png", // Путь к картинке вопроса
+        answers: ["С 16 лет (или с 15, имея общее образование)", "Только с 18 лет", "С 21 года", "Не знаю"],
+        correct: "С 16 лет (или с 15, имея общее образование)"
     },
     {
         image: "images/question2.jpg",
