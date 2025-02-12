@@ -144,13 +144,13 @@ function showResult() {
     let resultImage = "";
 
     if (score === questions.length) {
-        resultImage = "images/result_perfect.jpg"; // Картинка для максимального результата
+        resultImage = "images/result_perfect.webp"; // Картинка для максимального результата
     } else if (score > questions.length / 2) {
-        resultImage = "images/result_good.jpg"; // Картинка для хорошего результата
+        resultImage = "images/result_good.webp"; // Картинка для хорошего результата
     } else if (score > 4) {
-        resultImage = "images/result_average.jpg"; // Картинка для среднего результата
+        resultImage = "images/result_average.webp"; // Картинка для среднего результата
     } else {
-        resultImage = "images/result_bad.jpg"; // Картинка для плохого результата
+        resultImage = "images/result_bad.webp"; // Картинка для плохого результата
     }
 
     // Отображаем картинку результата
